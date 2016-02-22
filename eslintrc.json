@@ -1,16 +1,6 @@
 {
   "parser": "babel-eslint",
 
-  "rules": {
-      "babel/generator-star-spacing": 1,
-      "babel/new-cap": 1,
-      "babel/array-bracket-spacing": 1,
-      "babel/object-curly-spacing": 1,
-      "babel/object-shorthand": 1,
-      "babel/arrow-parens": 1,
-      "babel/no-await-in-loop": 1
-  },
-
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
@@ -27,7 +17,8 @@
 
   "plugins": [
     "promise",
-    "standard"
+    "standard",
+    "sanctuary"
   ],
 
   "globals": {
@@ -119,7 +110,6 @@
     "no-this-before-super": 2,
     "no-throw-literal": 2,
     "no-trailing-spaces": 2,
-    "no-undef": 2,
     "no-undef-init": 2,
     "no-unexpected-multiline": 2,
     "no-unneeded-ternary": [2, { "defaultAssignment": false }],
@@ -151,6 +141,8 @@
     "standard/array-bracket-even-spacing": [2, "either"],
     "standard/computed-property-even-spacing": [2, "even"],
 
-    "promise/param-names": 2
+    "promise/param-names": 2,
+
+    "sanctuary/no-undef": [2, { "typeof": true, "label": true }]
   }
 }
