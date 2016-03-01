@@ -29,7 +29,6 @@
 
   "rules": {
     "accessor-pairs": 2,
-    "arrow-parens": [2, "always"],
     "arrow-spacing": [2, { "before": true, "after": true }],
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
@@ -143,6 +142,14 @@
 
     "promise/param-names": 2,
 
-    "sanctuary/no-undef": [2, { "typeof": true, "label": true }]
+    "sanctuary/no-undef": [2, { "typeof": true, "label": true }],
+
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/array-bracket-spacing": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1
   }
 }
