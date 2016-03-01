@@ -18,7 +18,8 @@
   "plugins": [
     "promise",
     "standard",
-    "sanctuary"
+    "sanctuary",
+    "babel"
   ],
 
   "globals": {
