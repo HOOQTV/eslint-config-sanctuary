@@ -31,6 +31,7 @@
   "rules": {
     "accessor-pairs": 2,
     "arrow-spacing": [2, { "before": true, "after": true }],
+    "array-bracket-spacing": [2, "always"],
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "comma-dangle": [2, "never"],
@@ -118,6 +119,7 @@
     "no-useless-call": 2,
     "no-useless-constructor": 2,
     "no-with": 2,
+    "object-curly-spacing": [2, "always"],
     "one-var": [2, "always"],
     "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
     "padded-blocks": [2, "never"],
@@ -147,8 +149,6 @@
 
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
-    "babel/array-bracket-spacing": 1,
-    "babel/object-curly-spacing": 1,
     "babel/object-shorthand": 1,
     "babel/arrow-parens": 1,
     "babel/no-await-in-loop": 1
