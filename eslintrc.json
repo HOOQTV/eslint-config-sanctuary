@@ -19,7 +19,8 @@
     "promise",
     "standard",
     "sanctuary",
-    "babel"
+    "babel",
+    "flow-vars"
   ],
 
   "globals": {
@@ -151,6 +152,9 @@
     "babel/new-cap": 1,
     "babel/object-shorthand": 1,
     "babel/arrow-parens": 1,
-    "babel/no-await-in-loop": 1
+    "babel/no-await-in-loop": 1,
+
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1
   }
 }

@@ -1,22 +1,23 @@
-var eslint = require('eslint')
-var test = require('tape')
-var fs = require('fs')
+'use strict';
 
-test('load config in eslint to validate all rule syntax is correct', function (t) {
-  var CLIEngine = eslint.CLIEngine
+const eslint = require('eslint'),
+    test = require('tape'),
+    path = require('path'),
+    fs = require('fs');
 
-  var cli = new CLIEngine({
-    useEslintrc: false,
-    configFile: 'eslintrc.json'
-  })
+test('load config in eslint to validate all rule syntax is correct', function(t) {
+    const CLIEngine = eslint.CLIEngine,
+        cli = new CLIEngine({
+            useEslintrc: false,
+            configFile: 'eslintrc.json'
+        }),
 
-  var codes = fs.readdirSync(__dirname + '/codes')
+        codes = fs.readdirSync(path.join(__dirname, '/codes'));
 
-  for (var i = 0; i < codes.length; i++) {
-    var code = fs.readFileSync(__dirname + '/codes/' + codes[i])
-    code = code.toString()
-    t.ok(cli.executeOnText(code).errorCount === 0, 'cli.executeOnText(' + code + ')')
-  }
-
-  t.end()
-})
+    for (let i = 0; i < codes.length; i++) {
+        let code = fs.readFileSync(path.join(__dirname, '/codes/', codes[ i ]));
+        code = code.toString();
+        t.ok(cli.executeOnText(code).errorCount === 0, 'cli.executeOnText(' + code + ')');
+    }
+    t.end();
+});
